@@ -1,12 +1,12 @@
-import { BodyWrapper } from "@/container/Wrapper";
-import { MainButton } from "@/styles/ButtonStyles";
-import { Body1, SubTitle } from "@/styles/TextStyles";
+import { BodyWrapper } from "container/Wrapper";
+import { MainButton } from "styles/ButtonStyles";
+import { Body1, SubTitle } from "styles/TextStyles";
 import styled from "styled-components";
-import Link from "next/link";
-import ruth from "@/images/images/ruth.png";
-import ImageWrapper from "@/components/ImageWrapper";
+import { Link } from "react-router-dom";
+import ruth from "images/ruth.png";
+
 import { FC } from "react";
-import { RuthTheme } from "@/styles/ColorStyles";
+import { RuthTheme } from "styles/ColorStyles";
 
 const HomeLearn: FC = () => {
   return (
@@ -14,7 +14,7 @@ const HomeLearn: FC = () => {
       <Cover>
         <LearnGrid>
           <LearnLeft>
-            <ImageCover src={ruth} alt="Ruth" width={600} height={600} />
+            <ImageCover src={ruth} alt="Ruth" />
           </LearnLeft>
           <LearnRight>
             <RightSmall>
@@ -33,10 +33,8 @@ const HomeLearn: FC = () => {
                 quality of food you serve" is his main motto,says our head-ched
                 Sanjay
               </LearnText>
-              <Link href="/about" passHref>
-                <a>
-                  <LearnButton>Learn more about me</LearnButton>
-                </a>
+              <Link to="/about">
+                <LearnButton>Learn more about me</LearnButton>
               </Link>
             </RightLarge>
           </LearnRight>
@@ -71,7 +69,14 @@ const LearnLeft = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const ImageCover = styled(ImageWrapper)``;
+
+const ImageCover = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  min-height: 250px;
+`;
 const LearnRight = styled.div`
   display: grid;
   grid-template-columns: 24px auto;

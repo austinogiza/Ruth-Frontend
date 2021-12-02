@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
-import Link from "next/link";
-import ImageWrapper from "@/components/ImageWrapper";
-import { RuthTheme } from "@/styles/ColorStyles";
+import { Link } from "react-router-dom";
+
+import { RuthTheme } from "styles/ColorStyles";
 
 interface WorkProps {
   slug: string;
@@ -14,8 +14,8 @@ const WorkWrapper: FC<WorkProps> = (props) => {
   const { slug, src, title, label } = props;
   return (
     <Body>
-      <Link href={`/work/${slug}`}></Link>
-      <ImageWrapper src={src} width={600} height={400} alt={title} />
+      <Link to={`/work/${slug}`}></Link>
+      <ImageWrapper src={src} alt={title} />
       <Label>
         <p>{label}</p>
       </Label>
@@ -34,6 +34,14 @@ const Label = styled.div`
   padding: 10px, 16px, 10px, 16px;
   border: 1px solid ${RuthTheme.white};
   color: ${RuthTheme.white};
+`;
+
+const ImageWrapper = styled.img`
+  max-width: 600px;
+  max-height: 400px;
+  min-height: 250px;
+  width: 100%;
+  height: 100%;
 `;
 const Title = styled.div``;
 export default WorkWrapper;

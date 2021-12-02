@@ -1,29 +1,28 @@
-import ImageWrapper from "@/components/ImageWrapper";
-import type { NextPage } from "next";
 import styled from "styled-components";
-import error from "@/images/images/error.svg";
-import Layout from "@/container/Layout";
-import { RuthTheme } from "@/styles/ColorStyles";
-import { Header1, Body1 } from "@/styles/TextStyles";
-import { MainButton } from "@/styles/ButtonStyles";
-import Link from "next/link";
+import error from "images/error.svg";
+import { RuthTheme } from "styles/ColorStyles";
+import { Header1, Body1 } from "styles/TextStyles";
+import { MainButton } from "styles/ButtonStyles";
+import { Link } from "react-router-dom";
+import React, { FC, useEffect } from "react";
 
-const Error: NextPage = () => {
+const Error: FC = () => {
+  useEffect(() => {
+    document.title = "Page Not Found - Ruth Ikegah";
+  }, []);
+
   return (
     <Body>
-      <Layout title="Page Not Found" />
       <Cover>
-        <ImageWrapper src={error} alt="404" width={510} height={400} />
+        <ImageWrapper src={error} alt="404" />
 
         <Title>Page Not Found</Title>
         <Text>
           The page you are looking for doesn’t exist or has been moved. Kindly
           head home
         </Text>
-        <Link href="/" passHref>
-          <a>
-            <ErrorButton>Head home</ErrorButton>
-          </a>
+        <Link to="/">
+          <ErrorButton>Head home</ErrorButton>
         </Link>
       </Cover>
     </Body>
@@ -38,9 +37,18 @@ const Body = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+const ImageWrapper = styled.img`
+  max-width: 510px;
+  max-height: 400px;
+  min-height: 250px;
+  width: 100%;
+  height: 100%;
+`;
 const Cover = styled.div`
   width: 100%;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;

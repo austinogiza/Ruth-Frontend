@@ -1,25 +1,24 @@
-import ContactForm from '@/components/contact/ContactForm'
-import ContactHero from '@/components/contact/ContactHero'
-import Layout from '@/container/Layout'
-import type { NextPage } from 'next'
-import styled from 'styled-components'
+import ContactForm from "components/contact/ContactForm";
+import ContactHero from "components/contact/ContactHero";
 
-const Contact:NextPage = () => {
-    return (
-        <Body>
-            <Layout title="Contact Me"/>
-            <ContactHero/>
-            <ContactForm/>
-            
-        </Body>
-    )
-}
+import { FC } from "react";
+
+import styled from "styled-components";
+
+const Contact: FC = () => {
+  return (
+    <Body>
+      <ContactHero />
+      <ContactForm />
+    </Body>
+  );
+};
 
 const Body = styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
-export default Contact
+export default Contact;

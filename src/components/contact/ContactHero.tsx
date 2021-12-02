@@ -1,11 +1,7 @@
-import { FC } from "react"
+import { FC } from "react";
 
-const ContactHero:FC = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+const ContactHero: FC = () => {
+  return <div></div>;
+};
 
-export default ContactHero
+export default ContactHero;

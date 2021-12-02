@@ -1,48 +1,29 @@
-import { FC } from "react"
-import styled from "styled-components"
+import { FC } from "react";
+import styled from "styled-components";
 
-import {useRouter} from 'next/router'
+import { useLocation } from "react-router-dom";
 
-const Footer:FC = () => {
-
-    const router = useRouter()
-    return (
-
+const Footer: FC = () => {
+  const router = useLocation();
+  return (
+    <>
+      {router.pathname === "*" ? null : (
         <>
-{router.pathname==='/404'?
-null:
-<>
-
-<Body>
+          <Body>
             <Cover>
-
-                <Logo>
-
-                </Logo>
-                <CopyRight>
-                    &copy; {new Date().getFullYear()}
-                </CopyRight>
+              <Logo></Logo>
+              <CopyRight>&copy; {new Date().getFullYear()}</CopyRight>
             </Cover>
-            
-        </Body>
-</>
-}
+          </Body>
         </>
+      )}
+    </>
+  );
+};
 
-    )
-}
+const Body = styled.footer``;
+const Cover = styled.div``;
+const Logo = styled.div``;
+const CopyRight = styled.div``;
 
-const Body = styled.footer`
-
-`
-const Cover = styled.div`
-
-`
-const Logo = styled.div`
-
-`
-const CopyRight = styled.div`
-
-`
-
-export default Footer
+export default Footer;

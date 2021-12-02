@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-const About: FC = () => {
+const Work: FC = () => {
   return <div></div>;
 };
 
-export default About;
+export default Work;
