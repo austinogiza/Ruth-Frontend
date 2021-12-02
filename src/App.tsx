@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ScrollToTop from "components/ScrollTop";
+import Layout from "container/Layout";
+import About from "pages/about";
+import Contact from "pages/contact";
+import Home from "pages/Home";
+import WorkDetails from "pages/WorkDetails";
+import Work from "pages/Works";
+import React, { Fragment } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <BrowserRouter>
+        <Layout>
+          <ScrollToTop />
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<About />} path="/about" />
+            <Route element={<Work />} path="/work" />
+            <Route element={<WorkDetails />} path="/work/:slug" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<Home />} path="*" />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </Fragment>
   );
-}
+};
 
 export default App;
