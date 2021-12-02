@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.css": "/static/css/main.736d5c08.chunk.css",
     "main.js": "/static/js/main.34fe1bcc.chunk.js",
     "main.js.map": "/static/js/main.34fe1bcc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5a8a5145.js",
@@ -10,14 +10,15 @@
     "static/js/3.0a7e49f6.chunk.js": "/static/js/3.0a7e49f6.chunk.js",
     "static/js/3.0a7e49f6.chunk.js.map": "/static/js/3.0a7e49f6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/css/main.736d5c08.chunk.css.map": "/static/css/main.736d5c08.chunk.css.map",
     "static/js/2.cd690fe9.chunk.js.LICENSE.txt": "/static/js/2.cd690fe9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/NeueMachina-Ultrabold.07d4eef9.otf",
     "static/media/ruth.b209388b.png": "/static/media/ruth.b209388b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5a8a5145.js",
     "static/js/2.cd690fe9.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
+    "static/css/main.736d5c08.chunk.css",
     "static/js/main.34fe1bcc.chunk.js"
   ]
 }
