@@ -27,4 +27,7 @@ export const MainButton = styled.button`
   :hover {
     background: ${RuthTheme.white};
   }
+  @media only screen and (max-width: 650px) {
+    font-size: 15px;
+  }
 `;
