@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/About.tsx"],"names":["About"],"mappings":"+GAMeA,UAJG,WAChB,OAAO","file":"static/js/7.12d3e8ce.chunk.js","sourcesContent":["import { FC } from \"react\";\r\n\r\nconst About: FC = () => {\r\n  return <div></div>;\r\n};\r\n\r\nexport default About;\r\n"],"sourceRoot":""}
