@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { RuthTheme } from "./ColorStyles";
+import styled from "styled-components"
+import { RuthTheme } from "./ColorStyles"
 
 export const MainButton = styled.button`
   height: 64px;
@@ -30,4 +30,4 @@ export const MainButton = styled.button`
   @media only screen and (max-width: 650px) {
     font-size: 15px;
   }
-`;
+`

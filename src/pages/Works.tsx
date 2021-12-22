@@ -1,7 +1,15 @@
-import { FC } from "react";
+import WorkBody from "components/works/WorkBody"
+import { FC, useEffect } from "react"
 
 const Work: FC = () => {
-  return <div></div>;
-};
+  useEffect(() => {
+    document.title = "My Works - Ruth Ikegah"
+  }, [])
+  return (
+    <>
+      <WorkBody />
+    </>
+  )
+}
 
-export default Work;
+export default Work

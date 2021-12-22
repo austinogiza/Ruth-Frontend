@@ -1,21 +1,17 @@
 import styled from "styled-components"
-import { MainButton } from "styles/ButtonStyles"
+
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
 
-const HomeWork = () => {
+const WorkBody = () => {
   return (
     <Body>
       <Cover>
         <Title>
-          <TitleText>Selected work</TitleText>
+          <TitleText>My work</TitleText>
         </Title>
 
         <DoBox></DoBox>
-
-        <BlogButtonCover>
-          <BlogButton>View more work</BlogButton>
-        </BlogButtonCover>
       </Cover>
     </Body>
   )
@@ -41,7 +37,7 @@ const Cover = styled.div`
   height: 100%;
 `
 const Title = styled.div`
-  max-width: 550px;
+  max-width: 350px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -91,15 +87,4 @@ const DoBox = styled.div`
   }
 `
 
-const BlogButtonCover = styled.div`
-  min-height: 40px;
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-`
-const BlogButton = styled(MainButton)``
-export default HomeWork
+export default WorkBody
