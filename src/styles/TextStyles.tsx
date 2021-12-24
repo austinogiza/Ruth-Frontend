@@ -80,7 +80,7 @@ export const SubTitle = styled.h5`
   font-size: 21px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.5;
   @media only screen and (max-width: 650px) {
     font-size: 18px;
   }
@@ -111,6 +111,16 @@ export const SmallSub = styled.h5`
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
+  line-height: 1.1;
+  @media only screen and (max-width: 650px) {
+    font-size: 12px;
+  }
+`
+export const LightSmallSub = styled.h5`
+  font-family: "Neue Machina Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.1;
   @media only screen and (max-width: 650px) {
     font-size: 12px;

@@ -1,8 +1,10 @@
+import WorkWrapper from "components/WorkWrapper"
 import styled from "styled-components"
 import { MainButton } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
-
+import work from "images/ruthwork.png"
+import { Link } from "react-router-dom"
 const HomeWork = () => {
   return (
     <Body>
@@ -11,10 +13,37 @@ const HomeWork = () => {
           <TitleText>Selected work</TitleText>
         </Title>
 
-        <DoBox></DoBox>
+        <DoBox>
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+        </DoBox>
 
         <BlogButtonCover>
-          <BlogButton>View more work</BlogButton>
+          <Link to="/works">
+            <BlogButton>View more work</BlogButton>
+          </Link>
         </BlogButtonCover>
       </Cover>
     </Body>

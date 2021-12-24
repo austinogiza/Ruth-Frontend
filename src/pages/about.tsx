@@ -1,5 +1,6 @@
 import AboutExperience from "components/about/AboutExperience"
 import AboutHero from "components/about/AboutHero"
+import Awards from "components/about/Awards"
 import { FC, useEffect } from "react"
 import styled from "styled-components"
 
@@ -11,6 +12,7 @@ const About: FC = () => {
     <Body>
       <AboutHero />
       <AboutExperience />
+      <Awards />
     </Body>
   )
 }

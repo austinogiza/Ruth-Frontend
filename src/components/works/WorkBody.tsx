@@ -1,8 +1,9 @@
+import WorkWrapper from "components/WorkWrapper"
 import styled from "styled-components"
 
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
-
+import work from "images/ruthwork.png"
 const WorkBody = () => {
   return (
     <Body>
@@ -11,7 +12,32 @@ const WorkBody = () => {
           <TitleText>My work</TitleText>
         </Title>
 
-        <DoBox></DoBox>
+        <DoBox>
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+          <WorkWrapper
+            src={work}
+            slug="hello"
+            label="hello"
+            title="How to Write an Enticing Cover Letter"
+          />
+        </DoBox>
       </Cover>
     </Body>
   )

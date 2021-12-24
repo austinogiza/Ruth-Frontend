@@ -1,12 +1,12 @@
-import { BodyWrapper } from "container/Wrapper";
-import { MainButton } from "styles/ButtonStyles";
-import { Body1, SubTitle } from "styles/TextStyles";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import ruth from "images/ruth.png";
+import { BodyWrapper } from "container/Wrapper"
+import { MainButton } from "styles/ButtonStyles"
+import { Body1, SubTitle } from "styles/TextStyles"
+import styled from "styled-components"
+import { Link } from "react-router-dom"
+import ruth from "images/ruth.png"
 
-import { FC } from "react";
-import { RuthTheme } from "styles/ColorStyles";
+import { FC } from "react"
+import { RuthTheme } from "styles/ColorStyles"
 
 const HomeLearn: FC = () => {
   return (
@@ -41,14 +41,14 @@ const HomeLearn: FC = () => {
         </LearnGrid>
       </Cover>
     </Body>
-  );
-};
+  )
+}
 
 const Body = styled.div`
   width: 100%;
-`;
+`
 
-const Cover = styled(BodyWrapper)``;
+const Cover = styled(BodyWrapper)``
 const LearnGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -62,13 +62,13 @@ const LearnGrid = styled.div`
     grid-gap: 24px;
     gap: 24px;
   }
-`;
+`
 const LearnLeft = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const ImageCover = styled.img`
   width: 100%;
@@ -76,31 +76,32 @@ const ImageCover = styled.img`
   max-width: 600px;
   max-height: 600px;
   min-height: 250px;
-`;
+`
 const LearnRight = styled.div`
   display: grid;
   grid-template-columns: 24px auto;
   grid-gap: 10px;
   gap: 10px;
   align-items: flex-start;
-`;
-const RightSmall = styled.div``;
+`
+const RightSmall = styled.div``
 const RightCircle = styled.div`
   height: 16px;
   width: 16px;
   background: ${RuthTheme.white};
   border-radius: 50%;
-`;
+  margin: 8px 0 0 0;
+`
 const RightLarge = styled.div`
   color: ${RuthTheme.white};
   display: flex;
   flex-direction: column;
-`;
-const LearnTitle = styled(SubTitle)``;
+`
+const LearnTitle = styled(SubTitle)``
 const LearnText = styled(Body1)`
   margin: 16px 0;
-`;
+`
 const LearnButton = styled(MainButton)`
   margin: 24px 0;
-`;
-export default HomeLearn;
+`
+export default HomeLearn
