@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/WorkDetails.tsx"],"names":["WorkDetails"],"mappings":"+GAMeA,UAJS,WACtB,OAAO","file":"static/js/8.4a750ed1.chunk.js","sourcesContent":["import { FC } from \"react\";\r\n\r\nconst WorkDetails: FC = () => {\r\n  return <div></div>;\r\n};\r\n\r\nexport default WorkDetails;\r\n"],"sourceRoot":""}

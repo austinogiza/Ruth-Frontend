@@ -3,8 +3,26 @@ import styled from "styled-components"
 
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
-import work from "images/ruthwork.png"
-const WorkBody = () => {
+import { useQuery } from "react-query"
+import { WorkDataURL } from "constants/Constants"
+import { FC } from "react"
+import axios from "axios"
+import LoadingCard from "components/LoadingCard"
+interface WorkProps {
+  id?: number | string
+  title?: string
+  slug?: string
+  label?: string
+  image?: string
+}
+const WorkBody: FC<WorkProps> = (props) => {
+  const fetchWorks = () => {
+    return axios.get(WorkDataURL)
+  }
+  const { isLoading, data } = useQuery("works", fetchWorks, {
+    cacheTime: 30000,
+  })
+
   return (
     <Body>
       <Cover>
@@ -13,30 +31,18 @@ const WorkBody = () => {
         </Title>
 
         <DoBox>
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
+          {isLoading &&
+            [1, 2].map((data, index) => <LoadingCard key={index} />)}
+          {data &&
+            data.data.map((data: any) => (
+              <WorkWrapper
+                key={data.id}
+                src={data.image}
+                slug={`${data.slug}`}
+                title={data.title}
+                label={data.label}
+              />
+            ))}
         </DoBox>
       </Cover>
     </Body>
@@ -46,11 +52,8 @@ const WorkBody = () => {
 const Body = styled.div`
   width: 100%;
   height: 100%;
-  margin: 80px 0;
-
-  @media only screen and (max-width: 650px) {
-    margin: 40px 0;
-  }
+  position: relative;
+  margin: 0;
 `
 
 const Cover = styled.div`
@@ -58,7 +61,7 @@ const Cover = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 24px auto;
   min-height: 500px;
   height: 100%;
 `
@@ -69,7 +72,7 @@ const Title = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 80px auto 24px auto;
   min-height: 40px;
   height: 100%;
   padding: 16px;

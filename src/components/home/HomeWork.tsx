@@ -3,9 +3,28 @@ import styled from "styled-components"
 import { MainButton } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
-import work from "images/ruthwork.png"
 import { Link } from "react-router-dom"
-const HomeWork = () => {
+import { FC } from "react"
+import axios from "axios"
+import { useQuery } from "react-query"
+import { HomeWorkDataURL } from "constants/Constants"
+import LoadingCard from "components/LoadingCard"
+
+interface WorkProps {
+  id?: number | string
+  title?: string
+  slug?: string
+  label?: string
+  image?: string
+}
+const HomeWork: FC<WorkProps> = () => {
+  const fetchWorks = () => {
+    return axios.get(HomeWorkDataURL)
+  }
+  const { isLoading, data } = useQuery("works", fetchWorks, {
+    cacheTime: 30000,
+  })
+
   return (
     <Body>
       <Cover>
@@ -14,30 +33,17 @@ const HomeWork = () => {
         </Title>
 
         <DoBox>
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
-          <WorkWrapper
-            src={work}
-            slug="hello"
-            label="hello"
-            title="How to Write an Enticing Cover Letter"
-          />
+          {isLoading && [1, 2].map((data, index) => <LoadingCard />)}
+          {data &&
+            data.data.map((data: any) => (
+              <WorkWrapper
+                key={data.id}
+                src={data.image}
+                slug={`${data.slug}`}
+                title={data.title}
+                label={data.label}
+              />
+            ))}
         </DoBox>
 
         <BlogButtonCover>

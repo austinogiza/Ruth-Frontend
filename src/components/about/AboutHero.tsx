@@ -1,3 +1,4 @@
+import Navbar from "components/Navbar"
 import { FC } from "react"
 import styled from "styled-components"
 import { BorderButton } from "styles/ButtonStyles"
@@ -21,8 +22,8 @@ const AboutHero: FC = () => {
   ]
   return (
     <Body>
+      <Navbar />
       <Cover>
-        {" "}
         <HeroTop>
           <FirstImage
             src="https://res.cloudinary.com/deoofk9nn/image/upload/v1640136395/ruthhero_jwtldo.png"
@@ -75,12 +76,13 @@ const AboutHero: FC = () => {
 }
 const Body = styled.div`
   color: ${RuthTheme.white};
+  position: relative;
 `
 const Cover = styled.div`
   max-width: 1280px;
 
   padding: 16px;
-  margin: 0 auto;
+  margin: 80px auto;
   width: 100%;
 `
 
@@ -89,8 +91,9 @@ const HeroTop = styled.div`
   grid-template-columns: 5fr 2fr;
   grid-gap: 40px;
   gap: 40px;
+
   @media only screen and (max-width: 850px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 `
 const FirstImage = styled.img`
@@ -106,6 +109,9 @@ const SecondImage = styled.img`
   max-height: 535px;
   max-width: 370px;
   min-height: 250px;
+  @media only screen and (max-width: 850px) {
+    max-width: 840px;
+  }
 `
 const HeroBottom = styled.div`
   width: 100%;

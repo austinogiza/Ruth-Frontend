@@ -48,7 +48,7 @@ export const Header5 = styled.h4`
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.3;
   @media only screen and (max-width: 650px) {
     font-size: 21px;
   }

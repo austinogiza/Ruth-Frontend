@@ -1,24 +1,28 @@
-import ContactForm from "components/contact/ContactForm";
-import ContactHero from "components/contact/ContactHero";
+import ContactForm from "components/contact/ContactForm"
+import ContactHero from "components/contact/ContactHero"
 
-import { FC } from "react";
+import { FC, useEffect } from "react"
 
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Contact: FC = () => {
+  useEffect(() => {
+    document.title = "Contact Me - RUth Ikegah"
+  }, [])
+
   return (
     <Body>
       <ContactHero />
       <ContactForm />
     </Body>
-  );
-};
+  )
+}
 
 const Body = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-`;
+`
 
-export default Contact;
+export default Contact

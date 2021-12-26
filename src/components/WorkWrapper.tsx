@@ -6,10 +6,11 @@ import { RuthTheme } from "styles/ColorStyles"
 import { Header4, SmallSub, LightSmallSub } from "styles/TextStyles"
 
 interface WorkProps {
-  slug: string
-  title: string
+  title: string | any
+  label: string | any
+  slug: string | any
+
   src: any
-  label: string
 }
 const WorkWrapper: FC<WorkProps> = (props) => {
   const { slug, src, title, label } = props

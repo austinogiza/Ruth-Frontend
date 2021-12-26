@@ -1,22 +1,13 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 
-const PageLoading = () => {
+const LoadingCard = () => {
   return (
     <Body>
-      <Group>
-        <Circle />
-        <Textgroup>
-          <LightText />
-          <LightText />
-          <LightText />
-        </Textgroup>
-      </Group>
-
       <Image />
-
       <Text />
-
+      <SmallText />
+      <SmallText />
       <Shimmer>
         <ShimmerHalf />
       </Shimmer>
@@ -25,11 +16,11 @@ const PageLoading = () => {
 }
 
 const Body = styled.div`
-  height: 450px;
+  height: 350px;
   width: 100%;
-  max-width: 1100px;
-
-  margin: 8px auto;
+  max-width: 400px;
+  background: #f2f2f2;
+  margin: 8px 0;
   padding: 24px;
   overflow: hidden;
   position: relative;
@@ -74,31 +65,10 @@ const Text = styled.div`
   width: 100%;
   background: #ddd;
 `
-
-const Group = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 80px;
-`
-const Circle = styled.div`
-  width: 60px;
-  height: 60px;
-  background: #ddd;
-  border-radius: 50%;
-  margin: 0 16px 0 0;
-`
-const Textgroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 80px;
-`
-const LightText = styled.div`
+const SmallText = styled.div`
   height: 10px;
-  width: 100%;
+  width: 50%;
   margin: 8px 0;
   background: #ddd;
 `
-
-export default PageLoading
+export default LoadingCard
