@@ -12,7 +12,9 @@ const Navbar: FC = () => {
   const [menu, setMenu] = useState<boolean>(false)
 
   const location = useLocation()
-  useEffect(() => {}, [location])
+  useEffect(() => {
+    setMenu(false)
+  }, [location])
 
   const clickToggle = () => {
     setMenu(!menu)
@@ -46,14 +48,14 @@ const Navbar: FC = () => {
             </NavLink>
           </NavUL>
         </NavLinks>
+        <MobileToggle onClick={clickToggle}>
+          <MobileCover>
+            <TopTog toggle={menu} />
+            <MiddleTog toggle={menu} />
+            <BottomTog toggle={menu} />
+          </MobileCover>
+        </MobileToggle>
       </Cover>
-      <MobileToggle>
-        <MobileCover>
-          <TopTog />
-          <MiddleTog />
-          <BottomTog />
-        </MobileCover>
-      </MobileToggle>
     </Body>
   )
 }
@@ -83,13 +85,14 @@ const Cover = styled.div`
 `
 
 const MobileToggle = styled.div`
-  position: absolute;
-  width: 32px;
-  height: 10px;
+  position: fixed;
+  width: 40px;
+  height: 20px;
   right: 16px;
-  top: 16px;
-
+  top: 32px;
   display: none;
+
+  z-index: 50;
   @media only screen and (max-width: 800px) {
     display: flex;
   }
@@ -98,25 +101,40 @@ const MobileCover = styled.div`
   display: flex;
   flex-direction: column;
   width: 32px;
-  height: 10px;
+  height: 20px;
+
+  cursor: pointer;
+  transition: 0.4s ease-in;
 `
-const TopTog = styled.span`
-  width: 32px;
+const TopTog = styled.span<NavbarProps>`
+  width: 28px;
   height: 2px;
   background: ${RuthTheme.white};
-  margin: 4px 0;
+  border-radius: 10px;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+  transform: ${(props) =>
+    props.toggle ? " rotate(45deg) translate(-5px,6px)" : "rotate(0)"};
 `
-const MiddleTog = styled.span`
-  width: 32px;
+const MiddleTog = styled.span<NavbarProps>`
+  width: 28px;
   height: 2px;
+  transition: 0.4s ease-in;
   background: ${RuthTheme.white};
   margin: 4px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: ${(props) => (props.toggle ? "none" : "flex")};
 `
-const BottomTog = styled.span`
-  width: 32px;
+const BottomTog = styled.span<NavbarProps>`
+  width: 28px;
   height: 2px;
   background: ${RuthTheme.white};
-  margin: 4px 0;
+  border-radius: 10px;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+  transform: ${(props) =>
+    props.toggle ? " rotate(-45deg) translate(-5px,-6px)" : "rotate(0)"};
 `
 const NavLogo = styled.div`
   display: flex;
@@ -144,6 +162,7 @@ const NavLinks = styled.div<NavbarProps>`
     top: 0;
     left: 0;
     width: 100%;
+    transition: 0.4s ease-in;
     height: 100%;
     display: flex;
     justify-content: center;

@@ -87,6 +87,9 @@ const Title = styled.div`
   height: 100%;
   padding: 16px;
   position: relative;
+  @media only screen and (max-width: 650px) {
+    max-width: 260px;
+  }
 
   ::after {
     position: absolute;
