@@ -73,10 +73,14 @@ const Cover = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "Name Word";
   align-items: center;
   padding: 16px;
   @media only screen and (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "Word"
+      "Name";
   }
 `
 const HeroCover = styled.div`
@@ -86,6 +90,10 @@ const HeroCover = styled.div`
   flex-direction: column;
   color: ${RuthTheme.white};
   margin: 80px 0;
+  grid-area: Name;
+  @media only screen and (max-width: 650px) {
+    margin: 24px 0 0 0;
+  }
 `
 const TopText = styled(Header3)``
 
@@ -130,6 +138,7 @@ const BottomLeft = styled.div`
   max-width: 400px;
 `
 const LargeText = styled.div`
+  grid-area: Word;
   h1 {
     color: #ffffff;
 
@@ -142,8 +151,9 @@ const LargeText = styled.div`
     text-align: right;
     margin: 24px 0;
     @media only screen and (max-width: 650px) {
-      font-size: 56px;
+      font-size: 32px;
       text-align: center;
+      margin: 48px 0 0 0;
     }
   }
 `

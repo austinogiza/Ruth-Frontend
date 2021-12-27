@@ -61,12 +61,17 @@ const Cover = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  grid-template-areas: "Award Word";
   padding: 16px;
   @media only screen and (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "Word"
+      "Award";
   }
 `
 const Socials = styled.div`
+  grid-area: Award;
   @media only screen and (max-width: 650px) {
     display: flex;
     justify-content: center;
@@ -74,6 +79,7 @@ const Socials = styled.div`
   }
 `
 const LargeText = styled.div`
+  grid-area: Word;
   h1 {
     color: #ffffff;
 

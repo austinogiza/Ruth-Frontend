@@ -202,5 +202,11 @@ const NavLI = styled.li`
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  background: transparent;
+
+  :hover {
+    color: ${RuthTheme.primary};
+    background: ${RuthTheme.white};
+  }
 `
 export default Navbar
