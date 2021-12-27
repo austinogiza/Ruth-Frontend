@@ -10,19 +10,13 @@ import { useQuery } from "react-query"
 import { HomeWorkDataURL } from "constants/Constants"
 import LoadingCard from "components/LoadingCard"
 
-interface WorkProps {
-  id?: number | string
-  title?: string
-  slug?: string
-  label?: string
-  image?: string
-}
-const HomeWork: FC<WorkProps> = () => {
+const HomeWork: FC = () => {
   const fetchWorks = () => {
     return axios.get(HomeWorkDataURL)
   }
-  const { isLoading, data } = useQuery("works", fetchWorks, {
-    cacheTime: 30000,
+
+  const { isLoading, data } = useQuery("home-works", fetchWorks, {
+    cacheTime: 10000,
   })
 
   return (

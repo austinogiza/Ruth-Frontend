@@ -8,19 +8,13 @@ import { WorkDataURL } from "constants/Constants"
 import { FC } from "react"
 import axios from "axios"
 import LoadingCard from "components/LoadingCard"
-interface WorkProps {
-  id?: number | string
-  title?: string
-  slug?: string
-  label?: string
-  image?: string
-}
-const WorkBody: FC<WorkProps> = (props) => {
+
+const WorkBody: FC = (props) => {
   const fetchWorks = () => {
     return axios.get(WorkDataURL)
   }
-  const { isLoading, data } = useQuery("works", fetchWorks, {
-    cacheTime: 30000,
+  const { isLoading, data } = useQuery("page-works", fetchWorks, {
+    cacheTime: 10000,
   })
 
   return (

@@ -62,7 +62,7 @@ const Navbar: FC = () => {
 
 const Body = styled.nav`
   position: absolute;
-  z-index: 4;
+  z-index: 54;
   top: 0;
   left: 0;
   width: 100%;
