@@ -1,21 +1,40 @@
 import Navbar from "components/Navbar"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
 import { Body1, Header3 } from "styles/TextStyles"
 
+interface HeroProps {
+  blend: any
+}
 const HomeHero = () => {
+  const [remove, setRemove] = useState<boolean>(false)
+  const [timer, setTimer] = useState<number>(4)
+
+  useEffect(() => {
+    window.setInterval(() => {
+      setTimer((timer) => timer - 1)
+
+      if (timer === 0) {
+        setRemove(true)
+      }
+    }, 1000)
+  }, [timer])
   return (
     <Body>
       <Navbar />
       <Cover>
         <HeroCover>
-          <TopText>Ruth </TopText>
+          <TopText blend={remove} className="main_title">
+            Ruth
+          </TopText>
           <BottomRow>
             <Arrow />
             <BottomLeft>
-              <BottomText>Ikegah</BottomText>
+              <BottomText blend={remove} className="main_title">
+                Ikegah
+              </BottomText>
               <HeroText>
                 Vienna based art director and interface designer, with a strong
                 focus on design systems and component libraries.
@@ -95,7 +114,12 @@ const HeroCover = styled.div`
     margin: 24px 0 0 0;
   }
 `
-const TopText = styled(Header3)``
+const TopText = styled(Header3)<HeroProps>`
+  color: ${RuthTheme.white};
+  mix-blend-mode: ${(props) => (props.blend ? "normal" : "difference")};
+  position: relative;
+  z-index: 41;
+`
 
 const BottomRow = styled.div`
   width: 100%;
@@ -112,20 +136,29 @@ const Arrow = styled.span`
   margin: 40px 0 0 0;
 `
 
-const BottomText = styled(Header3)``
+const BottomText = styled(Header3)<HeroProps>`
+  color: ${RuthTheme.white};
+  mix-blend-mode: ${(props) => (props.blend ? "normal" : "difference")};
+  position: relative;
+  z-index: 41;
+`
 
 const HeroText = styled(Body1)`
   margin: 8px 0;
+  color: ${RuthTheme.white};
+  mix-blend-mode: difference;
 `
 
 const BottomArrow = styled.div`
   cursor: pointer;
+  transition: 0.4s ease-in-out;
   svg {
-    transition: 0.4s ease-in;
+    transition: 0.4s ease-in-out;
   }
   :hover svg path {
     fill: ${RuthTheme.white};
     cursor: pointer;
+    transition: 0.4s ease-in-out;
   }
 `
 const BottomLeft = styled.div`
@@ -139,6 +172,11 @@ const BottomLeft = styled.div`
 `
 const LargeText = styled.div`
   grid-area: Word;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
   h1 {
     color: #ffffff;
 

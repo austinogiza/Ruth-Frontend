@@ -78,6 +78,10 @@ const Socials = styled.div`
 `
 const LargeText = styled.div`
   position: absolute;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   top: 50%;
   z-index: 1;
   width: 100%;

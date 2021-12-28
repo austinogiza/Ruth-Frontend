@@ -72,6 +72,7 @@ const Cover = styled.div`
 `
 const Socials = styled.div`
   grid-area: Award;
+
   @media only screen and (max-width: 650px) {
     display: flex;
     justify-content: center;
@@ -80,6 +81,10 @@ const Socials = styled.div`
 `
 const LargeText = styled.div`
   grid-area: Word;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   h1 {
     color: #ffffff;
 
