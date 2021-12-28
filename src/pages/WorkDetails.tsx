@@ -93,9 +93,12 @@ const WorkDetails: FC = () => {
             </WorkHero>
             <WorkOverView>
               <OverviewTitle>Overview</OverviewTitle>
-              <OverviewText>
-                {data?.data.overview && data?.data.overview}
-              </OverviewText>
+              <OverviewText
+                dangerouslySetInnerHTML={{
+                  __html: data?.data.overview && data?.data.overview,
+                }}
+              />
+
               <WorkSlide>
                 <WorkSlideWrapper ref={sliderRef} className="keen-slider">
                   {data?.data.image_1 !== null && (
@@ -206,6 +209,7 @@ const WorkHero = styled.div`
   width: 100%;
   height: 600px;
   position: relative;
+
   @media only screen and (max-width: 650px) {
     height: 400px;
   }
@@ -240,8 +244,8 @@ const HeroCover = styled.div`
   z-index: 4;
   margin: 24px auto;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: flex-end;
   padding: 16px;
 `
 const WorkTitle = styled(Header4)`

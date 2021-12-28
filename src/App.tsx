@@ -5,12 +5,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ScrollToTop from "components/ScrollTop"
 import gsap from "gsap"
 import PageTransition from "components/PageTransition"
-const Home = lazy(() => import("pages/Home"))
-const About = lazy(() => import("pages/About"))
-const Work = lazy(() => import("pages/Works"))
-const WorkDetails = lazy(() => import("pages/WorkDetails"))
-const Contact = lazy(() => import("pages/Contact"))
-const NotFound = lazy(() => import("pages/404"))
+const Home = lazy(() => import(/* webpackPrefetch:true */ "pages/Home"))
+const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
+const Work = lazy(() => import(/* webpackPrefetch:true */ "pages/Works"))
+const WorkDetails = lazy(
+  () => import(/* webpackPrefetch:true */ "pages/WorkDetails")
+)
+const Contact = lazy(() => import(/* webpackPrefetch:true */ "pages/Contact"))
+const NotFound = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
 
 const App = () => {
   useEffect(() => {
