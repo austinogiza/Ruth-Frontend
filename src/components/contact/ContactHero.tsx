@@ -24,6 +24,9 @@ const Body = styled.div`
   justify-content: flex-start;
   position: relative;
   align-items: center;
+  @media only screen and (max-width: 650px) {
+    height: 400px;
+  }
 `
 const Cover = styled.div`
   max-width: 1280px;

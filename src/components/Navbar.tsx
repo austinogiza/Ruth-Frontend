@@ -86,7 +86,7 @@ const Cover = styled.div`
 
 const MobileToggle = styled.div`
   position: fixed;
-  width: 40px;
+  width: 48px;
   height: 20px;
   right: 16px;
   top: 32px;
@@ -100,14 +100,14 @@ const MobileToggle = styled.div`
 const MobileCover = styled.div`
   display: flex;
   flex-direction: column;
-  width: 32px;
+  width: 48px;
   height: 20px;
 
   cursor: pointer;
   transition: 0.4s ease-in;
 `
 const TopTog = styled.span<NavbarProps>`
-  width: 28px;
+  width: 48px;
   height: 2px;
   background: ${RuthTheme.white};
   border-radius: 10px;
@@ -117,7 +117,7 @@ const TopTog = styled.span<NavbarProps>`
     props.toggle ? " rotate(45deg) translate(-5px,6px)" : "rotate(0)"};
 `
 const MiddleTog = styled.span<NavbarProps>`
-  width: 28px;
+  width: 48px;
   height: 2px;
   transition: 0.4s ease-in;
   background: ${RuthTheme.white};
@@ -127,7 +127,7 @@ const MiddleTog = styled.span<NavbarProps>`
   display: ${(props) => (props.toggle ? "none" : "flex")};
 `
 const BottomTog = styled.span<NavbarProps>`
-  width: 28px;
+  width: 48px;
   height: 2px;
   background: ${RuthTheme.white};
   border-radius: 10px;
