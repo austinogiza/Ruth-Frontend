@@ -92,7 +92,7 @@ const MobileToggle = styled.div`
   top: 32px;
   display: none;
 
-  z-index: 53;
+  z-index: 63;
   @media only screen and (max-width: 800px) {
     display: flex;
   }
@@ -166,9 +166,9 @@ const NavLinks = styled.div<NavbarProps>`
     height: 100%;
     display: flex;
     justify-content: center;
-    padding: 24px;
+    padding: 64px 16px;
     background: ${RuthTheme.primary};
-    z-index: 52;
+    z-index: 62;
     transform: ${(props) =>
       props.toggle ? "translateY(0px)" : "translateY(-2000px)"};
     /* align-items: center; */
@@ -194,7 +194,7 @@ const NavLI = styled.li`
   align-items: center;
   border-radius: 40px;
   padding: 11px 34px;
-  border: 0.5px solid ${RuthTheme.white};
+  border: 0.8px solid ${RuthTheme.white};
   transition: 0.4s ease-in;
   color: ${RuthTheme.white};
   font-family: "Neue Machina Bold";

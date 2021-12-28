@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect, lazy, Suspense } from "react"
 import Layout from "container/Layout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import ScrollToTop from "components/ScrollTop"
 import gsap from "gsap"
-
+import PageTransition from "components/PageTransition"
 const Home = lazy(() => import("pages/Home"))
 const About = lazy(() => import("pages/About"))
 const Work = lazy(() => import("pages/Works"))
@@ -20,7 +21,7 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <ScrollToTop />
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<PageTransition />}>
             <Routes>
               <Route element={<Home />} path="/" />
               <Route element={<About />} path="/about" />
