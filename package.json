@@ -15,6 +15,7 @@
     "graphql-request": "^3.7.0",
     "graphql-tag": "^2.12.6",
     "gsap": "^3.9.1",
+    "gzipper": "^6.1.0",
     "keen-slider": "^6.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && compress-cra",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "compress-create-react-app": "^1.2.1"
   }
 }
