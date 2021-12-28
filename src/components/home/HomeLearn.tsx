@@ -1,6 +1,6 @@
 import { BodyWrapper } from "container/Wrapper"
 import { MainButton } from "styles/ButtonStyles"
-import { Body1, SubTitle } from "styles/TextStyles"
+import { Body2, SubTitle } from "styles/TextStyles"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import ruth from "images/ruth.png"
@@ -98,7 +98,7 @@ const RightLarge = styled.div`
   flex-direction: column;
 `
 const LearnTitle = styled(SubTitle)``
-const LearnText = styled(Body1)`
+const LearnText = styled(Body2)`
   margin: 16px 0;
 `
 const LearnButton = styled(MainButton)`

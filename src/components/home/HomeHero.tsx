@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
-import { Body1, Header3 } from "styles/TextStyles"
+import { Body2, Header3 } from "styles/TextStyles"
 
 interface HeroProps {
   blend: any
@@ -94,7 +94,7 @@ const Cover = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "Name Word";
   align-items: center;
-  padding: 16px;
+
   @media only screen and (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
@@ -110,9 +110,11 @@ const HeroCover = styled.div`
   color: ${RuthTheme.white};
   margin: 80px 0;
   grid-area: Name;
-  max-width: 330px;
+  max-width: 550px;
+  width: 100%;
+
   @media only screen and (max-width: 650px) {
-    margin: 24px 0 0 0;
+    margin: 24px auto 0 auto;
   }
 `
 const TopText = styled(Header3)<HeroProps>`
@@ -132,12 +134,15 @@ const BottomRow = styled.div`
 
 const Arrow = styled.span`
   height: 8px;
-  width: 61px;
+  max-width: 61px;
+  width: 100%;
   background: ${RuthTheme.white};
   margin: 40px 0 0 0;
 
   @media only screen and (max-width: 650px) {
     margin: 20px 0 0 0;
+    max-width: 15px;
+    width: 100%;
   }
 `
 
@@ -148,7 +153,7 @@ const BottomText = styled(Header3)<HeroProps>`
   z-index: 41;
 `
 
-const HeroText = styled(Body1)`
+const HeroText = styled(Body2)`
   margin: 8px 0;
   color: ${RuthTheme.white};
   mix-blend-mode: difference;
@@ -156,10 +161,15 @@ const HeroText = styled(Body1)`
 
 const BottomArrow = styled.div`
   cursor: pointer;
+  max-width: 400px;
+  width: 100%;
   transition: 0.4s ease-in-out;
   svg {
     transition: 0.4s ease-in-out;
+    max-width: 400px;
+    width: 100%;
   }
+
   :hover svg path {
     fill: ${RuthTheme.white};
     cursor: pointer;

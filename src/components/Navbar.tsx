@@ -168,7 +168,7 @@ const NavLinks = styled.div<NavbarProps>`
     justify-content: center;
     padding: 24px;
     background: ${RuthTheme.primary};
-    z-index: 50;
+    z-index: 52;
     transform: ${(props) =>
       props.toggle ? "translateY(0px)" : "translateY(-2000px)"};
     /* align-items: center; */

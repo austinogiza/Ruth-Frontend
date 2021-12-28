@@ -3,7 +3,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import { BorderButton } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
-import { Body1, TinySub } from "styles/TextStyles"
+import { Body2, TinySub } from "styles/TextStyles"
 
 const AboutHero: FC = () => {
   const socials = [
@@ -125,7 +125,7 @@ const HeroCover = styled.div`
     margin: 32px 0 0 0;
   }
 `
-const Herotext = styled(Body1)``
+const Herotext = styled(Body2)``
 const ButtonWrapper = styled.div`
   display: flex;
   margin: 40px 0;
