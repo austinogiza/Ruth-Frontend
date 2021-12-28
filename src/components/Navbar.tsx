@@ -62,7 +62,7 @@ const Navbar: FC = () => {
 
 const Body = styled.nav`
   position: absolute;
-  z-index: 39;
+  z-index: 40;
   top: 0;
   left: 0;
   width: 100%;
@@ -92,7 +92,7 @@ const MobileToggle = styled.div`
   top: 32px;
   display: none;
 
-  z-index: 50;
+  z-index: 53;
   @media only screen and (max-width: 800px) {
     display: flex;
   }
@@ -168,7 +168,7 @@ const NavLinks = styled.div<NavbarProps>`
     justify-content: center;
     padding: 24px;
     background: ${RuthTheme.primary};
-    z-index: 43;
+    z-index: 50;
     transform: ${(props) =>
       props.toggle ? "translateY(0px)" : "translateY(-2000px)"};
     /* align-items: center; */

@@ -37,18 +37,18 @@ const OverlayTop = styled.div`
   position: absolute;
   height: 100%;
   background: ${RuthTheme.secondary};
-  width: 33.33vw;
+  width: 34%;
   z-index: 40;
   left: 0;
   top: 0;
 
   &:nth-child(2) {
-    left: 33.333%;
+    left: 33%;
     background: ${RuthTheme.secondary};
   }
 
   &:nth-child(3) {
-    left: 66.666%;
+    left: 66%;
     background: ${RuthTheme.secondary};
   }
 `

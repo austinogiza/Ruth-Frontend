@@ -1,14 +1,16 @@
-import React, { Fragment, useEffect } from "react"
+import React, { Fragment, useEffect, lazy, Suspense } from "react"
 import Layout from "container/Layout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "pages/Home"
-import About from "pages/About"
-import Work from "pages/Works"
-import WorkDetails from "pages/WorkDetails"
-import Contact from "pages/Contact"
-import NotFound from "pages/404"
 import ScrollToTop from "components/ScrollTop"
 import gsap from "gsap"
+
+const Home = lazy(() => import("pages/Home"))
+const About = lazy(() => import("pages/About"))
+const Work = lazy(() => import("pages/Works"))
+const WorkDetails = lazy(() => import("pages/WorkDetails"))
+const Contact = lazy(() => import("pages/Contact"))
+const NotFound = lazy(() => import("pages/404"))
+
 const App = () => {
   useEffect(() => {
     gsap.to("body", 0, { css: { visibility: "visible" } })
@@ -18,14 +20,16 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <ScrollToTop />
-          <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<About />} path="/about" />
-            <Route element={<Work />} path="/works" />
-            <Route element={<WorkDetails />} path="/work/:slug" />
-            <Route element={<Contact />} path="/contact" />
-            <Route element={<NotFound />} path="*" />
-          </Routes>
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Routes>
+              <Route element={<Home />} path="/" />
+              <Route element={<About />} path="/about" />
+              <Route element={<Work />} path="/works" />
+              <Route element={<WorkDetails />} path="/work/:slug" />
+              <Route element={<Contact />} path="/contact" />
+              <Route element={<NotFound />} path="*" />
+            </Routes>
+          </Suspense>
         </Layout>
       </BrowserRouter>
     </Fragment>

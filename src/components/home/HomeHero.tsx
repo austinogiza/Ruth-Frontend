@@ -10,7 +10,7 @@ interface HeroProps {
 }
 const HomeHero = () => {
   const [remove, setRemove] = useState<boolean>(false)
-  const [timer, setTimer] = useState<number>(4)
+  const [timer, setTimer] = useState<number>(6)
 
   useEffect(() => {
     window.setInterval(() => {
@@ -110,6 +110,7 @@ const HeroCover = styled.div`
   color: ${RuthTheme.white};
   margin: 80px 0;
   grid-area: Name;
+  max-width: 330px;
   @media only screen and (max-width: 650px) {
     margin: 24px 0 0 0;
   }
@@ -134,6 +135,10 @@ const Arrow = styled.span`
   width: 61px;
   background: ${RuthTheme.white};
   margin: 40px 0 0 0;
+
+  @media only screen and (max-width: 650px) {
+    margin: 20px 0 0 0;
+  }
 `
 
 const BottomText = styled(Header3)<HeroProps>`
