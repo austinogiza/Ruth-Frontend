@@ -10,7 +10,7 @@ interface HeroProps {
 }
 const HomeHero = () => {
   const [remove, setRemove] = useState<boolean>(false)
-  const [timer, setTimer] = useState<number>(6)
+  const [timer, setTimer] = useState<number>(8)
 
   useEffect(() => {
     window.setInterval(() => {
