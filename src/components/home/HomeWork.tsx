@@ -135,4 +135,4 @@ const BlogButtonCover = styled.div`
 `
 const BlogButton = styled(MainButton)``
 
-export default React.memo(HomeWork)
+export default HomeWork

@@ -130,4 +130,4 @@ const DoTitle = styled(Header4)`
 `
 const DoText = styled(Body2)``
 
-export default React.memo(HomeDo)
+export default HomeDo

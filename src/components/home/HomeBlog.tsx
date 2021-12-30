@@ -217,4 +217,4 @@ const BlogButtonCover = styled.div`
   margin: 0 auto;
 `
 const BlogButtonHref = styled(BlogButton)``
-export default React.memo(HomeBlog)
+export default HomeBlog

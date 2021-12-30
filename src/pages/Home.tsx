@@ -16,7 +16,7 @@ const Home: FC = () => {
     document.documentElement.style.setProperty("--vh", `${vh}px`)
     const tl = gsap.timeline()
 
-    tl.from(".main_title", 1.8, {
+    tl.from(".main_title", 1.5, {
       opacity: 0,
       y: 70,
       ease: "power4.out",
@@ -26,7 +26,7 @@ const Home: FC = () => {
         amount: 0.3,
       },
     })
-      .to(".overlay_top", 1.8, {
+      .to(".overlay_top", 1.6, {
         height: 0,
         ease: "expo.inOut",
 

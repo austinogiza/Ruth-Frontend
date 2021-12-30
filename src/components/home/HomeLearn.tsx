@@ -103,4 +103,4 @@ const LearnText = styled(Body2)`
 const LearnButton = styled(MainButton)`
   margin: 24px 0;
 `
-export default React.memo(HomeLearn)
+export default HomeLearn

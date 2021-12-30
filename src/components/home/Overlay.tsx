@@ -52,4 +52,4 @@ const OverlayTop = styled.div`
     background: ${RuthTheme.secondary};
   }
 `
-export default React.memo(Overlay)
+export default Overlay

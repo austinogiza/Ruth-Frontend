@@ -211,4 +211,4 @@ const LargeText = styled.div`
   }
 `
 
-export default React.memo(HomeHero)
+export default HomeHero
