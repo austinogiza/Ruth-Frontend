@@ -4,7 +4,7 @@ import HomeHero from "components/home/HomeHero"
 import HomeLearn from "components/home/HomeLearn"
 import HomeWork from "components/home/HomeWork"
 import Overlay from "components/home/Overlay"
-import { FC, useEffect } from "react"
+import React, { FC, useEffect } from "react"
 import gsap from "gsap"
 import styled from "styled-components"
 
@@ -52,4 +52,4 @@ const Home: FC = () => {
 }
 
 const Body = styled.div``
-export default Home
+export default React.memo(Home)

@@ -4,6 +4,7 @@ import { RuthTheme } from "styles/ColorStyles"
 import { Header3, Header6, LightTinySub } from "styles/TextStyles"
 import { gql } from "graphql-request"
 import { useQuery } from "react-query"
+import React from "react"
 const HomeBlog = () => {
   async function gql(query: any, variables = {}) {
     const data = await fetch("https://api.hashnode.com/", {
@@ -44,7 +45,6 @@ const HomeBlog = () => {
     cacheTime: 10000,
   })
 
-  console.log(data)
   return (
     <Body>
       <Cover>
@@ -217,4 +217,4 @@ const BlogButtonCover = styled.div`
   margin: 0 auto;
 `
 const BlogButtonHref = styled(BlogButton)``
-export default HomeBlog
+export default React.memo(HomeBlog)

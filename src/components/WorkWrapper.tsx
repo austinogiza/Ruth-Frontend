@@ -1,4 +1,4 @@
-import { FC } from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
@@ -151,4 +151,4 @@ const WorkText = styled(LightSmallSub)`
 
   margin: 0 10px 0 0;
 `
-export default WorkWrapper
+export default React.memo(WorkWrapper)

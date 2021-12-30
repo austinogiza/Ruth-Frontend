@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3, Header4, Body2, TinySub } from "styles/TextStyles"
@@ -129,4 +130,4 @@ const DoTitle = styled(Header4)`
 `
 const DoText = styled(Body2)``
 
-export default HomeDo
+export default React.memo(HomeDo)

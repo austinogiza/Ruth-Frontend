@@ -23,4 +23,4 @@ const Body = styled.div`
   align-items: center;
   color: ${RuthTheme.white};
 `
-export default PageTransition
+export default React.memo(PageTransition)

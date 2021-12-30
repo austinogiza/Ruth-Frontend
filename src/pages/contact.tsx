@@ -1,7 +1,7 @@
 import ContactForm from "components/contact/ContactForm"
 import ContactHero from "components/contact/ContactHero"
 
-import { FC, useEffect } from "react"
+import React, { FC, useEffect } from "react"
 
 import styled from "styled-components"
 
@@ -25,4 +25,4 @@ const Body = styled.div`
   flex-direction: column;
 `
 
-export default Contact
+export default React.memo(Contact)

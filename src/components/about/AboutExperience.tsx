@@ -1,4 +1,4 @@
-import { FC } from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
 import {
@@ -123,4 +123,4 @@ const Place = styled(SmallSub)`
 const Date = styled(Body3)``
 const ExperienceDetails = styled.div``
 const ExperienceText = styled(Body2)``
-export default AboutExperience
+export default React.memo(AboutExperience)

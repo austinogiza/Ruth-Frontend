@@ -1,5 +1,5 @@
 import Navbar from "components/Navbar"
-import { FC } from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
 
@@ -63,4 +63,4 @@ const ContactText = styled.h1`
     font-size: 36px;
   }
 `
-export default ContactHero
+export default React.memo(ContactHero)

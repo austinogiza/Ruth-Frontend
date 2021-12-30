@@ -1,7 +1,7 @@
 import AboutExperience from "components/about/AboutExperience"
 import AboutHero from "components/about/AboutHero"
 import Awards from "components/about/Awards"
-import { FC, useEffect } from "react"
+import React, { FC, useEffect } from "react"
 import styled from "styled-components"
 
 const About: FC = () => {
@@ -24,4 +24,4 @@ const Body = styled.div`
   width: 100%;
   height: 100%;
 `
-export default About
+export default React.memo(About)

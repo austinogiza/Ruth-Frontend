@@ -3,7 +3,7 @@ import Loader from "components/Loader"
 import Notification from "components/Notification"
 import { ContactURL } from "constants/Constants"
 import { BodyWrapper } from "container/Wrapper"
-import { ChangeEvent, FC, FormEvent, useEffect, useState } from "react"
+import React, { ChangeEvent, FC, FormEvent, useEffect, useState } from "react"
 import styled from "styled-components"
 import { FormBut } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
@@ -237,4 +237,4 @@ const Error = styled.span`
   color: ${RuthTheme.secondary};
 `
 const ErrorText = styled(LightTinySub)``
-export default ContactForm
+export default React.memo(ContactForm)

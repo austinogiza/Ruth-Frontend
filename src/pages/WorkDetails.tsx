@@ -2,7 +2,7 @@ import axios from "axios"
 import Navbar from "components/Navbar"
 import PageLoading from "components/PageLoading"
 import { WorkDetailURL } from "constants/Constants"
-import { FC, useEffect, useState } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import { useQuery } from "react-query"
@@ -365,4 +365,4 @@ const WorkLink = styled.div`
   }
 `
 
-export default WorkDetails
+export default React.memo(WorkDetails)

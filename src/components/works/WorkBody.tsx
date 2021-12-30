@@ -5,7 +5,7 @@ import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
 import { useQuery } from "react-query"
 import { WorkDataURL } from "constants/Constants"
-import { FC } from "react"
+import React, { FC } from "react"
 import axios from "axios"
 import LoadingCard from "components/LoadingCard"
 
@@ -13,6 +13,7 @@ const WorkBody: FC = (props) => {
   const fetchWorks = () => {
     return axios.get(WorkDataURL)
   }
+
   const { isLoading, data } = useQuery("page-works", fetchWorks, {
     cacheTime: 10000,
   })
@@ -113,4 +114,4 @@ const DoBox = styled.div`
   }
 `
 
-export default WorkBody
+export default React.memo(WorkBody)

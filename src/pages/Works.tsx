@@ -1,5 +1,5 @@
 import WorkBody from "components/works/WorkBody"
-import { FC, useEffect } from "react"
+import React, { FC, useEffect } from "react"
 import Navbar from "components/Navbar"
 import styled from "styled-components"
 
@@ -20,4 +20,4 @@ const Body = styled.div`
   width: 100%;
   margin: 0;
 `
-export default Work
+export default React.memo(Work)

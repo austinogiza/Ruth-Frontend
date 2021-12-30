@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { Link, NavLink, useLocation } from "react-router-dom"
 import styled from "styled-components"
 import { RuthTheme } from "styles/ColorStyles"
@@ -209,4 +209,4 @@ const NavLI = styled.li`
     background: ${RuthTheme.white};
   }
 `
-export default Navbar
+export default React.memo(Navbar)

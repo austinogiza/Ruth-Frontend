@@ -1,5 +1,5 @@
 import Navbar from "components/Navbar"
-import { FC } from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import { BorderButton } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
@@ -160,4 +160,4 @@ const HeroButton = styled(BorderButton)`
     margin: 16px 8px 0 0;
   }
 `
-export default AboutHero
+export default React.memo(AboutHero)

@@ -1,11 +1,10 @@
+import React, { FC } from "react"
 import { BodyWrapper } from "container/Wrapper"
 import { MainButton } from "styles/ButtonStyles"
 import { Body2, SubTitle } from "styles/TextStyles"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import ruth from "images/ruth.png"
-
-import { FC } from "react"
 import { RuthTheme } from "styles/ColorStyles"
 
 const HomeLearn: FC = () => {
@@ -104,4 +103,4 @@ const LearnText = styled(Body2)`
 const LearnButton = styled(MainButton)`
   margin: 24px 0;
 `
-export default HomeLearn
+export default React.memo(HomeLearn)

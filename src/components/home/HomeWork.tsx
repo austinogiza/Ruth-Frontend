@@ -4,7 +4,7 @@ import { MainButton } from "styles/ButtonStyles"
 import { RuthTheme } from "styles/ColorStyles"
 import { Header3 } from "styles/TextStyles"
 import { Link } from "react-router-dom"
-import { FC } from "react"
+import React, { FC } from "react"
 import axios from "axios"
 import { useQuery } from "react-query"
 import { HomeWorkDataURL } from "constants/Constants"
@@ -134,4 +134,5 @@ const BlogButtonCover = styled.div`
   margin: 0 auto;
 `
 const BlogButton = styled(MainButton)``
-export default HomeWork
+
+export default React.memo(HomeWork)

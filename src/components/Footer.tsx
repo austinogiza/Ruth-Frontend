@@ -1,4 +1,4 @@
-import { FC } from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 
 import { useLocation } from "react-router-dom"
@@ -119,4 +119,4 @@ const SocialLi = styled.li`
     color: ${RuthTheme.secondary};
   }
 `
-export default Footer
+export default React.memo(Footer)
