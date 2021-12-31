@@ -16,7 +16,7 @@
     "graphql-request": "^3.7.0",
     "graphql-tag": "^2.12.6",
     "gsap": "^3.9.1",
-    "gzipper": "^6.1.0",
+    "gzipper": "^6.2.1",
     "keen-slider": "^6.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -27,6 +27,7 @@
     "react-spinner-material": "^1.3.1",
     "styled-components": "^5.3.3",
     "typescript": "^4.1.2",
+    "uninstall": "^0.0.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -54,7 +55,6 @@
     ]
   },
   "devDependencies": {
-    "@types/loadable__component": "^5.13.4",
-    "compress-create-react-app": "^1.2.1"
+    "@types/loadable__component": "^5.13.4"
   }
 }
