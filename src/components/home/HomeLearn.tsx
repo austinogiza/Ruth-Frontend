@@ -4,7 +4,6 @@ import { MainButton } from "styles/ButtonStyles"
 import { Body2, SubTitle } from "styles/TextStyles"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import ruth from "images/ruth.png"
 import { RuthTheme } from "styles/ColorStyles"
 
 const HomeLearn: FC = () => {
@@ -13,7 +12,10 @@ const HomeLearn: FC = () => {
       <Cover>
         <LearnGrid>
           <LearnLeft>
-            <ImageCover src={ruth} alt="Ruth" />
+            <ImageCover
+              src={`https://res.cloudinary.com/deoofk9nn/image/upload/v1640949890/ruth_hxmwwb.png`}
+              alt="Ruth"
+            />
           </LearnLeft>
           <LearnRight>
             <RightSmall>
