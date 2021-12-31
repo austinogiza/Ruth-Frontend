@@ -365,4 +365,4 @@ const WorkLink = styled.div`
   }
 `
 
-export default React.memo(WorkDetails)
+export default WorkDetails

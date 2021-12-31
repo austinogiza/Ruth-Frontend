@@ -151,4 +151,4 @@ const WorkText = styled(LightSmallSub)`
 
   margin: 0 10px 0 0;
 `
-export default React.memo(WorkWrapper)
+export default WorkWrapper

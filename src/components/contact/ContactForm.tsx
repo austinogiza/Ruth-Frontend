@@ -237,4 +237,4 @@ const Error = styled.span`
   color: ${RuthTheme.secondary};
 `
 const ErrorText = styled(LightTinySub)``
-export default React.memo(ContactForm)
+export default ContactForm

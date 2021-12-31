@@ -25,4 +25,4 @@ const Body = styled.div`
   flex-direction: column;
 `
 
-export default React.memo(Contact)
+export default Contact

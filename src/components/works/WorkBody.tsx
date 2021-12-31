@@ -114,4 +114,4 @@ const DoBox = styled.div`
   }
 `
 
-export default React.memo(WorkBody)
+export default WorkBody

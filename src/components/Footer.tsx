@@ -119,4 +119,4 @@ const SocialLi = styled.li`
     color: ${RuthTheme.secondary};
   }
 `
-export default React.memo(Footer)
+export default Footer

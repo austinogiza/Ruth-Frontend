@@ -209,4 +209,4 @@ const NavLI = styled.li`
     background: ${RuthTheme.white};
   }
 `
-export default React.memo(Navbar)
+export default Navbar

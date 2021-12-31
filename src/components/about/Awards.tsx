@@ -135,4 +135,4 @@ const SocialLi = styled.li`
     color: ${RuthTheme.secondary};
   }
 `
-export default React.memo(Awards)
+export default Awards

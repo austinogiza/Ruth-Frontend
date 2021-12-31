@@ -63,4 +63,4 @@ const ContactText = styled.h1`
     font-size: 36px;
   }
 `
-export default React.memo(ContactHero)
+export default ContactHero

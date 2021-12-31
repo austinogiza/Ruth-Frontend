@@ -160,4 +160,4 @@ const HeroButton = styled(BorderButton)`
     margin: 16px 8px 0 0;
   }
 `
-export default React.memo(AboutHero)
+export default AboutHero

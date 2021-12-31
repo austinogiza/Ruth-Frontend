@@ -52,4 +52,4 @@ const Home: FC = () => {
 }
 
 const Body = styled.div``
-export default React.memo(Home)
+export default Home

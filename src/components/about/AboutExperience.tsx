@@ -123,4 +123,4 @@ const Place = styled(SmallSub)`
 const Date = styled(Body3)``
 const ExperienceDetails = styled.div``
 const ExperienceText = styled(Body2)``
-export default React.memo(AboutExperience)
+export default AboutExperience

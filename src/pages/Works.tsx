@@ -20,4 +20,4 @@ const Body = styled.div`
   width: 100%;
   margin: 0;
 `
-export default React.memo(Work)
+export default Work
