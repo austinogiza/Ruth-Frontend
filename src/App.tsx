@@ -1,18 +1,20 @@
-import React, { Fragment, useEffect, lazy, Suspense } from "react"
+import React, { Fragment, useEffect, Suspense } from "react"
 import Layout from "container/Layout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-
+import loadable from "@loadable/component"
 import ScrollToTop from "components/ScrollTop"
 import gsap from "gsap"
 import PageTransition from "components/PageTransition"
-const Home = lazy(() => import(/* webpackPrefetch:true */ "pages/Home"))
-const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
-const Work = lazy(() => import(/* webpackPrefetch:true */ "pages/Works"))
-const WorkDetails = lazy(
+const Home = loadable(() => import(/* webpackPrefetch:true */ "pages/Home"))
+const About = loadable(() => import(/* webpackPrefetch:true */ "pages/About"))
+const Work = loadable(() => import(/* webpackPrefetch:true */ "pages/Works"))
+const WorkDetails = loadable(
   () => import(/* webpackPrefetch:true */ "pages/WorkDetails")
 )
-const Contact = lazy(() => import(/* webpackPrefetch:true */ "pages/Contact"))
-const NotFound = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
+const Contact = loadable(
+  () => import(/* webpackPrefetch:true */ "pages/Contact")
+)
+const NotFound = loadable(() => import(/* webpackPrefetch:true */ "pages/404"))
 
 const App = () => {
   useEffect(() => {
